@@ -1,34 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trileros</title>
     <link rel="stylesheet" href="./styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles/bannerNoticias.css">
 </head>
+
 <body>
-   
-    <div id="app"></div>
-    <header> 
+
+    <header>
+        <nav>
+            <a href="#" class="azar-game">
+                <img src="assets/icons/game.jpg" alt="logo">
+                <p>AZARGame</p>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#" aria-current="page">Juego</a></li>
+            </ul>
+            <div id="data-country">
+                <button class="button-country">api</button>
+            </div>
+            <div class="users-container">
+                <div class="users" id="usersBlock">
+                    <img src="./assets/icons/user-color.jpg" alt="usuario">
+                    <button>ACCEDER<br>REGISTRO</button>
+                </div>
+            </div>
+            <li class="menu" id="menuBtn" onclick="toggleMenu()">
+                <img src="./assets/icons/icons-menu.svg" alt="menú" />
+            </li>
+        </nav>
+    </header>
+    <main>
         <h1> TRILEROS</h1>
         <h2 class="subtitle">¿ puedes seguir la bolita ?</h2>
-    </header>
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="./scripts/game.js"></script>
-    <script src="./scripts/noticias.js"></script>
-
-
+    </main>
 </body>
+
 </html>
