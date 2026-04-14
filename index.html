@@ -4,19 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-message.txt
-3 KB
-﻿
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trileros</title>
     <link rel="stylesheet" href="./styles/main.css">
 
+    <link rel="stylesheet" href="./styles/bannerNoticias.css">
 
 
 
@@ -32,7 +23,6 @@ message.txt
 
 
 
-    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
@@ -86,14 +76,15 @@ message.txt
 
             <!-- este es el fin de de Nav Maria -->
         </nav>
+
+
     </header>
-    <main>
+    <main class="page-layout">
         <h1> TRILEROS</h1>
         <h2 class="subtitle">¿ puedes seguir la bolita ?</h2>
-        <section class="latest-news"></section>
 
-<!-- este es el espacio de Dorien -->
 
+        <!-- este es el espacio de Dorien -->
 
 
 
@@ -137,9 +128,9 @@ message.txt
 
 
 
-<!-- este es el fin de contadores Dorien-->
- <!-- esta es el espacio de Yasira -->
 
+        <!-- este es el fin de contadores Dorien-->
+        <!-- esta es el espacio de Yasira -->
 
 
 
@@ -184,21 +175,39 @@ message.txt
 
 
 
- <!-- este es el fin de vasistos Yasira -->
+        <!-- este es el fin de vasistos Yasira -->
 
- <!-- este es el espacio de Irina -->
-<section class="latest-news">
+        <!-- este es el espacio de Irina -->
+        <!-- COLUMNA 1: Izquierda - Ubicación y Clima -->
+        <section class="location-climate-section">
+            <div class="location-section">
+                <h2>📍 Ubicación</h2>
+                <p id="location">Cargando ubicación...</p>
+            </div>
+            <div class="climate-section">
+                <h2>🌡️ Clima</h2>
+                <p id="clima">Cargando clima...</p>
+            </div>
+        </section>
 
-        <h2> Noticias</h2>
+        <!-- COLUMNA 2: Centro - Juego -->
+        <section class="game-section">
+            <h2>Juega Ahora</h2>
 
-        <div class="news-container" id="newsContainer">        
+        </section>
 
-        </div>
 
-    </section>
+        <!-- COLUMNA 3: Derecha - Noticias -->
+        <aside class="latest-news">
+            <h2>📰 Noticias</h2>
+            <div class="news-container" id="newsContainer">
+                <!-- Aquí se cargan las noticias -->
+            </div>
+        </aside>
 
 
 
+        
 
 
 
@@ -256,29 +265,7 @@ message.txt
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- este es el fin de Espacio apis Irina -->
+        <!-- este es el fin de Espacio apis Irina -->
 
 
     </main>
@@ -314,7 +301,7 @@ message.txt
 
     </footer>
     <script src="./index.js"></script>
-
+    <script src="./scripts/noticias.js"></script>
 
 
 

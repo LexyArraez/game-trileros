@@ -1,6 +1,3 @@
-// IMPORTANTE: Reemplaza 'YOUR_API_KEY' con tu clave de API de NewsAPI
-// Obtén tu clave gratuita en: https://newsapi.org/
-
 const API_KEY = 'c5210701b4454b5096c6487d77c43478';
 const API_URL = 'https://newsapi.org/v2/everything';
 
@@ -11,7 +8,7 @@ let news = [];
  * @param {string} query - Término de búsqueda
  * @param {number} pageSize - Cantidad de artículos a obtener
  */
-async function fetchNews(query = 'tecnologia', pageSize = 12) {
+async function fetchNews(query = 'tecnologia', pageSize = 3) {
     const container = document.getElementById('newsContainer');
     
     try {
@@ -94,6 +91,7 @@ function createNewsCard(article) {
         </div>
     `;
     
+
     return card;
 }
 
@@ -118,5 +116,5 @@ function renderNews() {
  * Inicializa la aplicación al cargar el DOM
  */
 document.addEventListener('DOMContentLoaded', () => {
-    fetchNews('tecnologia', 12);
+    fetchNews('tecnologia', 3);
 });
