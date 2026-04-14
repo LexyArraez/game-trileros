@@ -33,6 +33,7 @@ body {
 nav {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
     align-items: center;
     padding: 10px 20px;
 
@@ -76,7 +77,7 @@ nav {
 
 .nav-links a[aria-current="page"],
 .nav-links a[aria-current="page"]:hover {
-    color: var(--blue);
+    color: var(--cyan);
     font-weight: var(--weight-bold);
     cursor: pointer;
 }
@@ -92,9 +93,9 @@ nav {
     padding: 15px 30px;
     background-color: var(--dark-blue2);
     cursor: pointer;
-    margin-left: 50px;
-    margin-right: 50px;
     border: none;
+    display: none;
+    color: white;
 }
 
 .users {
@@ -126,7 +127,7 @@ nav {
 h1,
 .subtitle {
     text-align: center;
-    padding: 20px;
+    margin: 20px;
     animation: fadeDown 1s cubic-bezier(.22, 0, .50, 1) both;
 }
 
@@ -142,21 +143,93 @@ h1,
 }
 
 h1 {
-    font-size: clamp(36px, 8vw, 70px);
+    font-size: 70px;
+    color: var(--blue);
     letter-spacing: 8px;
-    background: linear-gradient(90deg, var(--cyan) 0%, var(--blue) 35%, var(--purple) 50%, var(--orange) 60%);
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
     line-height: 1;
 }
 
 .subtitle {
-    margin-top: 8px;
+
     font-size: 12px;
     letter-spacing: 8px;
     text-transform: uppercase;
     color: var(--blue)
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cups-container {
+  display: flex;
+  flex-direction: row;    
+  flex-wrap: nowrap;        
+  justify-content: center;  
+  align-items: center;      
+  gap: 5px;                
+  width: 100%;             
+  overflow-x: auto;
+  
+}
+
+.cups-container button {
+    background-color: transparent;
+    border: none;
+}
+
+.cups-container img {
+    width: 200px;
+    height: auto;
+    flex-shrink: 0;
+}
+
 
 /*  FOOTER  */
 footer {
@@ -227,13 +300,18 @@ footer {
     .users.active {
         display: flex;
     }
+    
 
-    .menu {
+    .menu,.button-country {
         display: block;
         margin-left: auto;
     }
 
     /* MAIN */
+
+
+
+  
 
     /* FOOTER */
     footer {
