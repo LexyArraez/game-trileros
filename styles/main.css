@@ -348,8 +348,7 @@ footer {
     background-color: transparent;
     border: 2px solid;
     padding: 10px 20px;
-    border-radius: 20px;
-    font-size: 16px;
+     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
 }
@@ -360,14 +359,17 @@ footer {
     background-color: var(--blue);
     border-color: var(--dark-blue);
     color: var(--black);
+    border-radius: 20px;
 }
 .medium{
     background-color: var(--blue); 
     border-color: var(--dark-blue);
     color: var(--black);
+    border-radius: 20px;
 }
 .hard{
     background-color: var(--blue);
     border-color: var(--dark-blue);
     color: var(--black);
+    border-radius: 20px;
 }
