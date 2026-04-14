@@ -3,7 +3,15 @@
 
 El objetivo del proyecto es recrear una pagina web en la que este implementado el juego de los trileros.
 
-## Requisitos
+## Requisitos funcionales generales
+    - La aplicación DEBE permitir al usuario jugar un juego seleccionado
+    - La aplicación PUEDE obtener la ubicación del usuario mediante geolocalización del navegador.
+    - La aplicación PUEDE identificar el país del usuario y mostrar la bandera correspondiente (API REST Countries o Country Flags).
+    - La aplicación DEBERÍA mostrar el estado actual del clima, utilizando la localización del usuario para consultar una API de clima (OpenWeatherMap o WeatherAPI).
+    - La aplicación DEBE mostrar un banner lateral con las noticias más recientes o relevantes del país del usuario, utilizando una API pública de noticias (NewsAPI o Mediastack).
+    - La aplicación DEBERÍA manejar de forma responsable los errores o bloqueos de permisos de geolocalización, mostrando mensajes amigables al usuario.
+
+## Requisitos funcionales juegos
 
 **Minimos** 
 

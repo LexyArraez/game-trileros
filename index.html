@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +9,7 @@
     <link rel="stylesheet" href="./styles/main.css">
 <link rel="stylesheet" href="./styles/contadores.css">
 
-
+    <link rel="stylesheet" href="./styles/bannerNoticias.css">
 
 
 
@@ -77,10 +78,10 @@
             <!-- este es el fin de de Nav Maria -->
         </nav>
     </header>
-    <main>
+    <main class="page-layout">
         <h1> TRILEROS</h1>
         <h2 class="subtitle">¿ puedes seguir la bolita ?</h2>
-        <section class="latest-news"></section>
+
 
         <!-- este es el espacio de Maria -->
     <div class="button-play">
@@ -222,29 +223,34 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-        <!-- este es el fin de vasistos Yasira -->
-
-        <!-- este es el espacio de Irina -->
-        <section class="latest-news">
-
-            <h2> Noticias</h2>
-
-            <div class="news-container" id="newsContainer">
-
+ <!-- este es el espacio de Irina -->
+<!-- COLUMNA 1: Izquierda - Ubicación y Clima -->
+        <section class="location-climate-section">
+            <div class="location-section">
+                <h2>📍 Ubicación</h2>
+                <p id="location">Cargando ubicación...</p>
             </div>
+            <div class="climate-section">
+                <h2>🌡️ Clima</h2>
+                <p id="clima">Cargando clima...</p>
+            </div>
+        </section>
+
+        <!-- COLUMNA 2: Centro - Juego -->
+        <section class="game-section">
+            <h2>Juega Ahora</h2>
 
         </section>
 
+
+        <!-- COLUMNA 3: Derecha - Noticias -->
+
+        <aside class="latest-news">
+            <h2>📰 Noticias</h2>
+            <div class="news-container" id="newsContainer">
+                <!-- Aquí se cargan las noticias -->
+            </div>
+        </aside>
 
 
 
@@ -364,7 +370,7 @@
     <script src="./index.js"></script>
     <script src="./scripts/game.js"></script>
 
-
+    <script src="./scripts/noticias.js"></script>
 
 
 
