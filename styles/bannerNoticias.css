@@ -101,10 +101,10 @@ section.page-layout h2.subtitle {
 
 
 /* Responsive */
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
     section.page-layout {
         grid-template-columns: 1fr;
-        padding: 20px;
+        padding: 5px;
     }
     
     .news-container {
@@ -114,4 +114,20 @@ section.page-layout h2.subtitle {
         width: 50%;
         height: 150px;
     }
+    @media (max-width: 768px) {
+    section.page-layout {
+        grid-template-columns: 1fr;
+        padding: 5px;
+    }
+
+    /* AÑADE ESTO */
+    .location-climate-section {
+        display: none;  /* oculto por defecto */
+        order: -1;      /* aparece arriba del todo */
+    }
+
+    .location-climate-section.active {
+        display: flex;
+    }
+}
 }

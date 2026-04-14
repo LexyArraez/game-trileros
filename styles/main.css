@@ -82,20 +82,25 @@ nav {
     cursor: pointer;
 }
 
-.button-play {
+.clima-nav {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    align-items: center;
+    gap: 6px;
+    color: white;
+    font-size: 14px;
+    border-color: #00a8ff;
+    border-radius: 20px;
+    padding: 6px 14px;
 }
 
-.button-country {
-    border-radius: 45%;
-    padding: 15px 30px;
-    background-color: var(--dark-blue2);
-    cursor: pointer;
-    border: none;
-    display: none;
-    color: white;
+.clima-nav span:first-child {
+    font-size: 22px;
+}
+
+.clima-nav #climaTempNav {
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--cyan);
 }
 
 .users {
@@ -117,7 +122,7 @@ nav {
     cursor: pointer;
 }
 
-.menu {
+.menu,.clima-nav {
     display: none;
     font-size: 24px;
     cursor: pointer;
@@ -285,7 +290,7 @@ footer {
     }
 
     .nav-links,
-    .users {
+    .users,.clima-nav{
         display: none;
         width: 100%;
         flex-direction: column;
@@ -302,7 +307,10 @@ footer {
     }
     
 
-    .menu,.button-country {
+    .menu,
+    .clima-nav
+    
+    {
         display: block;
         margin-left: auto;
     }
