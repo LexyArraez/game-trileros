@@ -82,6 +82,12 @@ nav {
     cursor: pointer;
 }
 
+.button-play {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
 .button-country {
     border-radius: 45%;
     padding: 15px 30px;
@@ -334,4 +340,34 @@ footer {
         width: 100%;
     }
 
+}
+
+<!--  BOTONES DE Maria  --¡>
+
+.btn{
+    background-color: transparent;
+    border: 2px solid;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+.btn:hover {
+    transform: scale(1.05);
+}
+.easy{
+    background-color: var(--blue);
+    border-color: var(--dark-blue);
+    color: var(--black);
+}
+.medium{
+    background-color: var(--blue); 
+    border-color: var(--dark-blue);
+    color: var(--black);
+}
+.hard{
+    background-color: var(--blue);
+    border-color: var(--dark-blue);
+    color: var(--black);
 }
