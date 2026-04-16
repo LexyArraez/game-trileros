@@ -122,7 +122,8 @@ nav {
     cursor: pointer;
 }
 
-.menu,.clima-nav {
+.menu,
+.clima-nav {
     display: none;
     font-size: 24px;
     cursor: pointer;
@@ -159,10 +160,84 @@ h1 {
     font-size: 12px;
     letter-spacing: 8px;
     text-transform: uppercase;
-    color: var(--blue)
+    color: var(--blue);
+}
+
+.button-play {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.button-play button {
+    background-color: #00a8ff;
+    border-radius: 50px;
+    border: none;
+    padding: 20px 50px;
+    cursor: pointer;
+    letter-spacing: 3px;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.contadores-juego {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    max-width: 60%;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.contadores-juego div {
+    width: 150px;
+    height: 85px;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 200, 255, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.contadores-juego p {
+    color: #4a9eff;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.contadores-juego span {
+
+    font-weight: bold;
+    margin-top: 5px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 
+#puntos {
+    color: #ffffff;
+}
+
+#tiempo {
+    color: #ffcc00;
+}
+
+#ronda {
+    color: #cc33ff;
+}
+
+#aciertos {
+    color: #28a745;
+}
+
+#fallos {
+    color: #dc3545;
+}
 
 
 
@@ -213,15 +288,15 @@ h1 {
 
 
 .cups-container {
-  display: flex;
-  flex-direction: row;    
-  flex-wrap: nowrap;        
-  justify-content: center;  
-  align-items: center;      
-  gap: 5px;                
-  width: 100%;             
-  overflow-x: auto;
-  
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    overflow-x: auto;
+
 }
 
 .cups-container button {
@@ -290,7 +365,8 @@ footer {
     }
 
     .nav-links,
-    .users,.clima-nav{
+    .users,
+    .clima-nav {
         display: none;
         width: 100%;
         flex-direction: column;
@@ -305,12 +381,10 @@ footer {
     .users.active {
         display: flex;
     }
-    
+
 
     .menu,
-    .clima-nav
-    
-    {
+    .clima-nav {
         display: block;
         margin-left: auto;
     }
@@ -318,8 +392,14 @@ footer {
     /* MAIN */
 
 
+    .contadores-juego {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 900px;
+        margin: 0 auto;
 
-  
+    }
+
+
 
     /* FOOTER */
     footer {
@@ -347,35 +427,4 @@ footer {
     .footer-links a {
         width: 100%;
     }
-
-}
-
-<!--  BOTONES DE Maria  --¡>
-
-.btn{
-    background-color: transparent;
-    border: 2px solid;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-}
-.btn:hover {
-    transform: scale(1.05);
-}
-.easy{
-    background-color: var(--blue);
-    border-color: var(--dark-blue);
-    color: var(--black);
-}
-.medium{
-    background-color: var(--blue); 
-    border-color: var(--dark-blue);
-    color: var(--black);
-}
-.hard{
-    background-color: var(--blue);
-    border-color: var(--dark-blue);
-    color: var(--black);
 }
