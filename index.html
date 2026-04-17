@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trileros</title>
     <link rel="stylesheet" href="./styles/main.css">
-    <link rel="stylesheet" href="./styles/contadores.css">
     <link rel="stylesheet" href="./styles/bannerNoticias.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -47,37 +46,37 @@
         <h1> TRILEROS</h1>
         <h2 class="subtitle">¿ puedes seguir la bolita ?</h2>
 
-        <div class="button-play">
-            <button class="btn easy">Facil</button>
-            <button class="btn medium">Medio</button>
-            <button class="btn hard">Dificil</button>
+        <div class="button-difficulty">
+            <button class="btn-easy active"  onclick="setDifficulty(this,'easy')">Facil</button>
+            <button class="btn-medium" onclick="setDifficulty(this,'medium')"> Medio</button>
+            <button class="btn-hard" onclick="setDifficulty(this,'hard')">Dificil</button>
         </div>
 
-        <section class="contadores-juego">
+        <section class="counters-game">
 
             <div>
                 <p>PUNTOS</p>
-                <span id="puntos">0</span>
+                <span id="points">0</span>
             </div>
 
             <div>
                 <p>TIEMPO</p>
-                <span id="tiempo">0:00</span>
+                <span id="time">0:00</span>
             </div>
 
             <div>
                 <p>RONDA</p>
-                <span id="ronda">1</span>
+                <span id="round">1</span>
             </div>
 
             <div>
                 <p>ACIERTOS</p>
-                <span id="aciertos">0</span>
+                <span id="successes">0</span>
             </div>
 
             <div>
                 <p>FALLOS</p>
-                <span id="fallos">0</span>
+                <span id="failures">0</span>
             </div>
 
         </section>
@@ -95,7 +94,6 @@
                     <p id="clima">Cargando clima...</p>
                 </div>
             </section>
-
             <!-- COLUMNA 2: Centro - Juego -->
 
             <section class="game-section">
@@ -104,20 +102,25 @@
                     <div class="cups-container">
                         <button class="cup" id="cup-1" aria-label="Vaso 1">
                             <img src="./assets/img/blue-cup-fondo.png" alt="">
+                             <p>1</p>
                         </button>
+                        
                         <button class="cup" id="cup-2" aria-label="Vaso 2">
                             <img src="./assets/img/purple-cup-fondo.png" alt="">
+                             <p>2</p>
                         </button>
                         <button class="cup" id="cup-3" aria-label="Vaso 3">
                             <img src="./assets/img/orange-cup-fondo_transparent.png" alt="">
+                             <p>3</p>
                         </button>
                     </div>
 
-                    <div>balls</div>
+                    <div class="ball"></div>
 
-                    <button>Iniciar juego</button>
-
-                    <p>Has click paRA INCIIAR JUEGO</p>
+                   
+                    <button class="start-game">I n i c i a r</button>
+                    <button class="reset-game">Reiniciar</button>
+                     <p id="gameMessage" class="game-message">HAZ  CLIC EN EL  VASO QUE ESCONDE LA BOLITA</p>
 
                 </div>
 

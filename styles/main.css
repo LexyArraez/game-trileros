@@ -21,7 +21,7 @@ html,
 body {
     margin: 0;
     padding: 0;
-    height: 100%;
+    min-height: 100vh;
     width: 100%;
     background: var(--dark-blue);
     font-family: var(--font);
@@ -70,16 +70,10 @@ nav {
     letter-spacing: 8px;
 }
 
-.nav-links a:hover {
-    color: var(--cyan);
-    font-weight: var(--weight-bold);
-}
-
-.nav-links a[aria-current="page"],
-.nav-links a[aria-current="page"]:hover {
-    color: var(--cyan);
-    font-weight: var(--weight-bold);
-    cursor: pointer;
+.nav-links a:hover,
+.nav-links a[aria-current="page"] {
+  color: var(--cyan);
+  font-weight: bold;
 }
 
 .clima-nav {
@@ -92,12 +86,7 @@ nav {
     border-radius: 20px;
     padding: 6px 14px;
 }
-
-.clima-nav span:first-child {
-    font-size: 22px;
-}
-
-.clima-nav #climaTempNav {
+#climaTempNav {
     font-weight: bold;
     font-size: 16px;
     color: var(--cyan);
@@ -134,18 +123,7 @@ h1,
 .subtitle {
     text-align: center;
     margin: 20px;
-    animation: fadeDown 1s cubic-bezier(.22, 0, .50, 1) both;
-}
-
-@keyframes fadeDown {
-    from {
-        transform: translateY(-30px);
-    }
-
-    to {
-
-        transform: translateY(0);
-    }
+ animation: fadeDown 1s ease both;
 }
 
 h1 {
@@ -162,17 +140,18 @@ h1 {
     text-transform: uppercase;
     color: var(--blue);
 }
-
-.button-play {
-    font-size: 16px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 20px;
-    width: 100%;
+@keyframes fadeDown {
+  from { transform: translateY(-30px); }
+  to { transform: translateY(0); }
+}
+.button-difficulty {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 80px;
 }
 
-.button-play button {
+.button-difficulty button {
     background-color: #00a8ff;
     border-radius: 50px;
     border: none;
@@ -181,20 +160,25 @@ h1 {
     letter-spacing: 3px;
 }
 
-.btn:hover {
+.button-difficulty button:hover {
     transform: scale(1.05);
 }
+.button-difficulty button.active {
+  background: var(--cyan);
+}
 
-.contadores-juego {
+
+
+.counters-game {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 10px;
     max-width: 60%;
-    padding: 15px;
+    padding: 20px;
     margin: 0 auto;
 }
 
-.contadores-juego div {
+.counters-game div {
     width: 150px;
     height: 85px;
     border-radius: 16px;
@@ -203,113 +187,108 @@ h1 {
     flex-direction: column;
     align-items: center;
     gap: 5px;
+
 }
 
-.contadores-juego p {
-    color: #4a9eff;
-    letter-spacing: 1px;
-    margin-bottom: 6px;
+.counters-game p {
+  color: #4a9eff;
 }
 
-.contadores-juego span {
-
-    font-weight: bold;
-    margin-top: 5px;
-    font-family: 'Courier New', Courier, monospace;
+.counters-game span {
+  font-weight: bold;
 }
 
+#points { color: white; }
+#time { color: #ffcc00; }
+#round { color: #cc33ff; }
+#successes { color: #28a745; }
+#failures { color: #dc3545; }
 
-#puntos {
-    color: #ffffff;
+
+.table-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  position: relative;
 }
-
-#tiempo {
-    color: #ffcc00;
-}
-
-#ronda {
-    color: #cc33ff;
-}
-
-#aciertos {
-    color: #28a745;
-}
-
-#fallos {
-    color: #dc3545;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .cups-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    width: 100%;
-    overflow-x: auto;
-
+  display: flex;
+  justify-content: center;
+  gap: 40px;
 }
+
 
 .cups-container button {
     background-color: transparent;
     border: none;
+    transition: transform 0.4s cubic-bezier(.4, 0, .2, 1);
+    position: relative;
+    z-index: 2;
+    outline: none;
+}
+.cup {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(.4,0,.2,1);
+  position: relative;
+  z-index: 2;
+  outline: none;
 }
 
 .cups-container img {
-    width: 200px;
     height: auto;
     flex-shrink: 0;
+    max-width: 100%;
 }
 
+.cups-container p {
+    color: #00a8ff;
+    margin-top: 40px;
+}
+
+.cup.lift {
+    transform: translateY(-60px) scale(1.05);
+}
+.cup:focus,
+.cup:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.ball {
+  width: 20px;
+  height: 20px;
+  background: var(--orange);
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+.game-message {
+    color: #00ffe1;
+    font-size: 16px;
+    margin-top: 12px;
+    text-align: center;
+}
+.start-game,
+.reset-game {
+  padding: 15px 40px;
+  border: none;
+  border-radius: 50px;
+  background: var(--blue);
+  cursor: pointer;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+
+.start-game:hover,
+.reset-game:hover {
+    transform: scale(1.05);
+}
 
 /*  FOOTER  */
 footer {
@@ -392,11 +371,10 @@ footer {
     /* MAIN */
 
 
-    .contadores-juego {
+    .counters-game {
         grid-template-columns: repeat(3, 1fr);
         max-width: 900px;
         margin: 0 auto;
-
     }
 
 
