@@ -259,10 +259,12 @@ h1 {
 }
 
 .ball {
+    position: absolute;
   width: 20px;
   height: 20px;
   background: var(--orange);
   border-radius: 50%;
+  opacity: 0;
   
 }
 .game-message {
