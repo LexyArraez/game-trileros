@@ -1,10 +1,10 @@
 // --- LÓGICA DE CONTADORES ---
 
 // 1. Obtenemos los elementos del DOM
-const puntosElemento = document.getElementById('puntos-valor');
-const aciertosElemento = document.getElementById('aciertos-valor');
-const fallosElemento = document.getElementById('fallos-valor');
-const rondaElemento = document.getElementById('ronda-valor');
+const puntosElemento = document.getElementById('points');
+const aciertosElemento = document.getElementById('round');
+const fallosElemento =  document.getElementById('successes');
+const rondaElemento = document.getElementById('failures');
 
 // 2. Estado inicial del juego
 let estadoJuego = {
