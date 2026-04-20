@@ -32,23 +32,8 @@
     font-family: 'Courier New', Courier, monospace; /* Fuente estilo digital */
 }
 
-/* Colores específicos según la imagen */
-#puntos-valor {
-    color: #ffffff; /* Blanco */
-}
-
-#tiempo-valor {
-    color: #ffcc00; /* Amarillo/Dorado */
-}
-
-#ronda-valor {
-    color: #cc33ff; /* Morado/Rosa */
-}
-
-#aciertos-valor {
-    color: #28a745; /* Verde */
-}
-
-#fallos-valor {
-    color: #dc3545; /* Rojo */
-}
+.contadores-juego #puntos-valor { color: #ffffff; }
+.contadores-juego #tiempo-valor { color: #ffcc00; }
+.contadores-juego #ronda-valor { color: #cc33ff; }
+.contadores-juego #aciertos-valor { color: #28a745; }
+.contadores-juego #fallos-valor { color: #dc3545; }
