@@ -103,16 +103,16 @@
                     <div class="table-area">
 
                         <div class="cups-container">
-                            <button class="cup" id="cup-1" aria-label="Vaso 1">
+                            <button type="button" class="cup" id="cup-1" aria-label="Vaso 1" data-pos="1" onclick="seleccionarVaso(1)">
                                 <img src="./assets/img/blue-cup-fondo.png" alt="">
                                 <p>1</p>
                             </button>
 
-                            <button class="cup" id="cup-2" aria-label="Vaso 2">
+                            <button type="button" class="cup" id="cup-2" aria-label="Vaso 2" data-pos="2" onclick="seleccionarVaso(2)">
                                 <img src="./assets/img/purple-cup-fondo.png" alt="">
                                 <p>2</p>
                             </button>
-                            <button class="cup" id="cup-3" aria-label="Vaso 3">
+                            <button type="button" class="cup" id="cup-3" aria-label="Vaso 3" data-pos="3" onclick="seleccionarVaso(3)">
                                 <img src="./assets/img/orange-cup-fondo_transparent.png" alt="">
                                 <p>3</p>
                             </button>
@@ -121,7 +121,7 @@
                         <div class="ball"></div>
 
 
-                        <button class="start-game">I n i c i a r</button>
+                        <button class="start-game" id="btn-start" onclick="comenzarMezcla()">I n i c i a r</button>
                         <button class="reset-game">Reiniciar</button>
                         <p id="gameMessage" class="game-message">HAZ CLIC EN EL VASO QUE ESCONDE LA BOLITA</p>
 
@@ -154,6 +154,7 @@
     <script src="./scripts/game.js"></script>
     <script src="./scripts/noticias.js"></script>
     <script src="./scripts/contador2.js"></script>
+    <script src="./scripts/cups.js"
 
 
 
