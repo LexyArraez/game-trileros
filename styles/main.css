@@ -175,7 +175,7 @@ h1 {
     gap: 10px;
     max-width: 60%;
     padding: 20px;
-    margin: 0 auto;
+    margin: 0 120px;
 }
 
 .counters-game div {
@@ -286,6 +286,7 @@ h1 {
 .reset-game:hover {
     transform: scale(1.05);
 }
+
 
 /*  FOOTER  */
 footer {

@@ -48,6 +48,7 @@ async function obtenerClima(lat, lon) {
             🌡️ ${cw.temperature}°C &nbsp;|&nbsp; 💨 ${cw.windspeed} km/h<br>
             💧 Humedad: ${humedad}%
         `;
+    
 
         // Actualizar navbar
         const iconNav = document.getElementById('climaIconNav');
