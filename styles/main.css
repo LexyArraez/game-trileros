@@ -257,6 +257,9 @@ h1 {
   outline: none;
   box-shadow: none;
 }
+/*.cup[data-pos="1"]{ transform: translateX(0); }
+.cup[data-pos="2"]{ transform: translateX(250px); }
+.cup[data-pos="3"]{ transform: translateX(500px); }*/
 
 .ball {
   width: 20px;
