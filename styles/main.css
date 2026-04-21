@@ -257,6 +257,9 @@ h1 {
   outline: none;
   box-shadow: none;
 }
+/*.cup[data-pos="1"]{ transform: translateX(0); }
+.cup[data-pos="2"]{ transform: translateX(250px); }
+.cup[data-pos="3"]{ transform: translateX(500px); }*/
 
 .game-message {
     color: #00ffe1;
@@ -405,4 +408,37 @@ footer {
     .footer-links a {
         width: 100%;
     }
+
+}
+
+<!--  BOTONES DE Maria  --¡>
+
+.btn{
+    background-color: transparent;
+    border: 2px solid;
+    padding: 10px 20px;
+     font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+.btn:hover {
+    transform: scale(1.05);
+}
+.easy{
+    background-color: var(--blue);
+    border-color: var(--dark-blue);
+    color: var(--black);
+    border-radius: 20px;
+}
+.medium{
+    background-color: var(--blue); 
+    border-color: var(--dark-blue);
+    color: var(--black);
+    border-radius: 20px;
+}
+.hard{
+    background-color: var(--blue);
+    border-color: var(--dark-blue);
+    color: var(--black);
+    border-radius: 20px;
 }
