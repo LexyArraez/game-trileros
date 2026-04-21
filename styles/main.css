@@ -218,16 +218,7 @@ h1 {
   justify-content: center;
   gap: 40px;
 }
-
-
-.cups-container button {
-    background-color: transparent;
-    border: none;
-    transition: transform 0.4s cubic-bezier(.4, 0, .2, 1);
-    position: relative;
-    z-index: 2;
-    outline: none;
-}
+ 
 .cup {
   border: none;
   background: transparent;
@@ -252,21 +243,24 @@ h1 {
 .cup.lift {
     transform: translateY(-60px) scale(1.05);
 }
+
 .cup:focus,
 .cup:active {
   outline: none;
   box-shadow: none;
 }
-/*.cup[data-pos="1"]{ transform: translateX(0); }
-.cup[data-pos="2"]{ transform: translateX(250px); }
-.cup[data-pos="3"]{ transform: translateX(500px); }*/
+
+.cup[data-pos="1"] { transform: translateX(0); }
+.cup[data-pos="2"] { transform: translateX(140px); }
+.cup[data-pos="3"] { transform: translateX(280px); }
 
 .ball {
   width: 20px;
   height: 20px;
   background: var(--orange);
   border-radius: 50%;
-  
+  position: absolute;
+  opacity: 0;
 }
 .game-message {
     color: #00ffe1;
