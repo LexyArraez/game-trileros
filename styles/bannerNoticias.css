@@ -19,7 +19,6 @@ section.page-layout h2.subtitle {
     gap: 20px;
 }
 
-
 .location-section,
 .climate-section {
     width: 230px;
@@ -59,10 +58,10 @@ section.page-layout h2.subtitle {
 
 /* COLUMNA DERECHA: Noticias */
 .latest-news {
-    
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding-right: 10px;
 }
 
 .latest-news h2 {
@@ -82,14 +81,13 @@ section.page-layout h2.subtitle {
     flex-direction: column;
     gap: 15px;
     overflow-y: auto;
-    padding-right: 5px;
+    padding: 5px;
 }
 
 .news-card {
     background: rgba(35, 24, 182, 0.3);
-    color: white;
+    color: #ffffff;
     border-radius: 8px;
-    border-left: 4px solid #00ffe1;
     transition: transform 0.3s ease;
 }
 
@@ -123,12 +121,11 @@ section.page-layout h2.subtitle {
             padding: 5px;
         }
 
-        /* AÑADE ESTO */
         .location-climate-section {
             display: none;
             /* oculto por defecto */
             order: -1;
-            /* aparece arriba del todo */
+
         }
 
         .location-climate-section.active {

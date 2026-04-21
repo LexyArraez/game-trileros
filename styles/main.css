@@ -72,8 +72,8 @@ nav {
 
 .nav-links a:hover,
 .nav-links a[aria-current="page"] {
-  color: var(--cyan);
-  font-weight: bold;
+    color: var(--cyan);
+    font-weight: bold;
 }
 
 .clima-nav {
@@ -86,6 +86,7 @@ nav {
     border-radius: 20px;
     padding: 6px 14px;
 }
+
 #climaTempNav {
     font-weight: bold;
     font-size: 16px;
@@ -123,7 +124,7 @@ h1,
 .subtitle {
     text-align: center;
     margin: 20px;
- animation: fadeDown 1s ease both;
+    animation: fadeDown 1s ease both;
 }
 
 h1 {
@@ -140,15 +141,22 @@ h1 {
     text-transform: uppercase;
     color: var(--blue);
 }
+
 @keyframes fadeDown {
-  from { transform: translateY(-30px); }
-  to { transform: translateY(0); }
+    from {
+        transform: translateY(-30px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
 }
+
 .button-difficulty {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 80px;
 }
 
 .button-difficulty button {
@@ -157,14 +165,17 @@ h1 {
     border: none;
     padding: 20px 50px;
     cursor: pointer;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 .button-difficulty button:hover {
     transform: scale(1.05);
 }
+
 .button-difficulty button.active {
-  background: var(--cyan);
+    background: var(--cyan);
 }
 
 
@@ -191,32 +202,46 @@ h1 {
 }
 
 .counters-game p {
-  color: #4a9eff;
+    color: #4a9eff;
 }
 
 .counters-game span {
-  font-weight: bold;
+    font-weight: bold;
 }
 
-#points { color: white; }
-#time { color: #ffcc00; }
-#round { color: #cc33ff; }
-#successes { color: #28a745; }
-#failures { color: #dc3545; }
+#points {
+    color: white;
+}
+
+#time {
+    color: #ffcc00;
+}
+
+#round {
+    color: #cc33ff;
+}
+
+#successes {
+    color: #28a745;
+}
+
+#failures {
+    color: #dc3545;
+}
 
 
 .table-area {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
 }
 
 .cups-container {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
 }
 
 
@@ -228,14 +253,15 @@ h1 {
     z-index: 2;
     outline: none;
 }
+
 .cup {
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  transition: transform 0.4s cubic-bezier(.4,0,.2,1);
-  position: relative;
-  z-index: 2;
-  outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(.4, 0, .2, 1);
+    position: relative;
+    z-index: 2;
+    outline: none;
 }
 
 .cups-container img {
@@ -252,30 +278,49 @@ h1 {
 .cup.lift {
     transform: translateY(-60px) scale(1.05);
 }
+
 .cup:focus,
 .cup:active {
-  outline: none;
-  box-shadow: none;
+    outline: none;
+    box-shadow: none;
 }
 /*.cup[data-pos="1"]{ transform: translateX(0); }
 .cup[data-pos="2"]{ transform: translateX(250px); }
 .cup[data-pos="3"]{ transform: translateX(500px); }*/
 
+.ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--orange);
+    border-radius: 50%;
+    z-index: 3;
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.ball.lift {
+    transform: translateY(-60px);
+}
+
 .game-message {
-    color: #00ffe1;
-    font-size: 16px;
+    color: var(--purple);
+    font-size: 30px;
     margin-top: 12px;
     text-align: center;
 }
+
 .start-game,
 .reset-game {
-  padding: 15px 40px;
-  border: none;
-  border-radius: 50px;
-  background: var(--blue);
-  cursor: pointer;
-  letter-spacing: 2px;
-  transition: 0.2s;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 50px;
+    background: var(--blue);
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: 0.2s;
+    font-weight: bold;
+    font-size: 25px;
 }
 
 .start-game:hover,
