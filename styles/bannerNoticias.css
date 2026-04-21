@@ -59,7 +59,7 @@ section.page-layout h2.subtitle {
 
 /* COLUMNA DERECHA: Noticias */
 .latest-news {
-
+    
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -86,7 +86,8 @@ section.page-layout h2.subtitle {
 }
 
 .news-card {
-    background: white;
+    background: rgba(35, 24, 182, 0.3);
+    color: white;
     border-radius: 8px;
     border-left: 4px solid #00ffe1;
     transition: transform 0.3s ease;
@@ -98,7 +99,7 @@ section.page-layout h2.subtitle {
 
 .news-card h3 {
     font-size: 0.95rem;
-    color: #04080f;
+    color: white;
     margin-bottom: 8px;
 }
 
