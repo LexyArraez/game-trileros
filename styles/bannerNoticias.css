@@ -44,6 +44,10 @@ section.page-layout h2.subtitle {
     font-size: 25px;
     line-height: 1.6;
 }
+.spain {
+    width: 80px;
+    margin: 0 50px;
+}
 
 
 /* COLUMNA CENTRAL: Juego */
