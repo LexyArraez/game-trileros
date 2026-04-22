@@ -99,16 +99,19 @@
                     <div class="table-area">
 
                         <div class="cups-container">
-                            <button type="button" class="cup" id="cup-1" aria-label="Vaso 1" data-pos="1" onclick="seleccionarVaso(1)">
+                            <button type="button" class="cup" id="cup-1" aria-label="Vaso 1" data-pos="1"
+                                onclick="seleccionarVaso(1)">
                                 <img src="./assets/img/blue-cup-fondo.png" alt="">
                                 <p>1</p>
                             </button>
 
-                            <button type="button" class="cup" id="cup-2" aria-label="Vaso 2" data-pos="2" onclick="seleccionarVaso(2)">
+                            <button type="button" class="cup" id="cup-2" aria-label="Vaso 2" data-pos="2"
+                                onclick="seleccionarVaso(2)">
                                 <img src="./assets/img/purple-cup-fondo.png" alt="">
                                 <p>2</p>
                             </button>
-                            <button type="button" class="cup" id="cup-3" aria-label="Vaso 3" data-pos="3" onclick="seleccionarVaso(3)">
+                            <button type="button" class="cup" id="cup-3" aria-label="Vaso 3" data-pos="3"
+                                onclick="seleccionarVaso(3)">
                                 <img src="./assets/img/orange-cup-fondo_transparent.png" alt="">
                                 <p>3</p>
                             </button>
@@ -120,6 +123,14 @@
                         <button class="start-game">Iniciar</button>
                         <button class="reset-game">Reiniciar</button>
                         <p id="gameMessage" class="game-message">HAZ CLIC EN EL VASO QUE ESCONDE LA BOLITA</p>
+
+                        <div id="modal" class="modal">
+                            <h3>Ingresa tu nombre</h3>
+                            <input type="text" id="playerName" placeholder="Tu nombre">
+                            <p id="error" class="error">Debes ingresar un nombre válido, mayor a 2 caracteres.</p>
+                            <br><br>
+                            <button id="btnGuardar" class="btnGuardar">Guardar</button>                            
+                        </div>
 
                     </div>
                 </section>

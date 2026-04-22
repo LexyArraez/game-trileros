@@ -4,17 +4,49 @@ function sleep(ms) {
     return new Promise(r => setTimeout(r, ms));
 }
 function startGame() {
-    if (state.phase === 'idle') startTimer();
-    startRound();
+    const existPlayer = localStorage.getItem('playerName');
+    if (!existPlayer) {
+        registerPlayer();
+    } else {
+        if (state.phase === 'idle') startTimer();
+        startRound();
+    }
+}
+function registerPlayer() {
+    const modal = document.getElementById('modal');
+    const input = document.getElementById('playerName');
+    const btnGuardar = document.getElementById("btnGuardar");
+    const errorMsg = document.getElementById('error');
+
+    const name = input.value.trim();
+
+    modal.style.display = 'block';
+
+    btnGuardar.addEventListener('click', () => {
+        const name = input.value.trim();
+
+        if (name.length < 2 || name == '') {
+            errorMsg.style.display = 'block';
+            return;
+         } 
+         else { 
+            errorMsg.style.display = 'none';
+            localStorage.setItem('playerName', name);
+            btnGuardar.style.display = 'block';
+         }
+        modal.style.display = 'none';
+        return name;
+    });
 }
 
 async function startRound() {
+    const jugador = localStorage.getItem('playerName') || 'Jugador';
     state.phase = 'showing';
     state.canPick = false;
 
     state.ballIndex = Math.floor(Math.random() * 3);
 
-    setMessage('Observa la bolita...');
+    setMessage(`${jugador} Observa la bolita...`);
 
     placeBall(state.ballIndex);
     ball.style.opacity = '1';
@@ -28,7 +60,8 @@ async function startRound() {
     await shuffleCups();
 
     state.canPick = true;
-    setMessage('¿Dónde está la bolita?');
+    
+    setMessage(`¿Dónde está la bolita ${jugador}?`);
 }
 
 function pickCup(index) {
@@ -146,7 +179,7 @@ function resetGame() {
 
     ball.style.opacity = '0';
     cups.forEach(c => c.classList.remove('lift'));
-
+    localStorage.removeItem('playerName');
     setMessage('Juego reiniciado');
 
     resetOrder();
@@ -164,11 +197,12 @@ function resetOrder() {
 
 /* END */
 function endGame() {
-  clearInterval(state.timer);
-  setMessage(`Juego terminado 🎉 Puntos: ${state.points}`);
+    clearInterval(state.timer);
+    setMessage(`Juego terminado 🎉 Puntos: ${state.points}`);
 }
 
 
 function setMessage(msg) {
-  document.getElementById('gameMessage').textContent = msg;
+    document.getElementById('gameMessage').textContent = msg;
 }
+
