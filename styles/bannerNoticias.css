@@ -82,6 +82,7 @@ section.page-layout h2.subtitle {
     gap: 15px;
     overflow-y: auto;
     padding: 5px;
+    color: white;
 }
 
 .news-card {

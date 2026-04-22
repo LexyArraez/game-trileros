@@ -23,7 +23,6 @@ function comenzarMezcla() {
    // if (mezclando) return;
     mezclando = true;
     const maxInteractions = 10;
-    alert("¡Comienza la mezcla! Presta atención a los movimientos de las copas."); 
 
     const intervalo = setInterval(() => {
         let v1 = Math.floor(Math.random() * 3);
