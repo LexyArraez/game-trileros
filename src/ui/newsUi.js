@@ -1,32 +1,15 @@
-const API_KEY = 'c5210701b4454b5096c6487d77c43478';
-const API_URL = 'https://newsapi.org/v2/everything';
+import { DOM } from './dom.js';
 
-async function fetchNews(query = 'tecnologia', pageSize = 4) {
+export function renderNewsLoading() {
   DOM.newsContainer.innerHTML = '<p class="loading">Cargando noticias...</p>';
+}
 
-  try {
-    const params = new URLSearchParams({
-      q: query,
-      language: 'es',
-      sortBy: 'publishedAt',
-      pageSize,
-      apiKey: API_KEY,
-    });
+export function renderNewsError(message) {
+  DOM.newsContainer.innerHTML = `<p class="error">Error al cargar noticias: ${message}</p>`;
+}
 
-    const response = await fetch(`${API_URL}?${params}`);
-    if (!response.ok) throw new Error(`Error: ${response.status}`);
-
-    const data = await response.json();
-
-    if (data.articles?.length > 0) {
-      renderNews(data.articles);
-    } else {
-      DOM.newsContainer.innerHTML = '<p class="error">No se encontraron noticias.</p>';
-    }
-  } catch (error) {
-    console.error('Error al obtener noticias:', error);
-    DOM.newsContainer.innerHTML = `<p class="error">Error al cargar noticias: ${error.message}</p>`;
-  }
+export function renderNewsEmpty() {
+  DOM.newsContainer.innerHTML = '<p class="error">No se encontraron noticias.</p>';
 }
 
 function formatDate(dateString) {
@@ -67,11 +50,9 @@ function createNewsCard(article) {
   return card;
 }
 
-function renderNews(articles) {
+export function renderNews(articles) {
   DOM.newsContainer.innerHTML = '';
   const fragment = document.createDocumentFragment();
   articles.forEach(article => fragment.appendChild(createNewsCard(article)));
   DOM.newsContainer.appendChild(fragment);
 }
-
-document.addEventListener('DOMContentLoaded', () => fetchNews('tecnologia', 4));

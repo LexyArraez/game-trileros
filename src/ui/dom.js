@@ -1,0 +1,18 @@
+export const DOM = {
+  points:        document.getElementById('points'),
+  time:          document.getElementById('time'),
+  round:         document.getElementById('round'),
+  successes:     document.getElementById('successes'),
+  failures:      document.getElementById('failures'),
+  gameMessage:   document.getElementById('gameMessage'),
+  newsContainer: document.getElementById('newsContainer'),
+  cupsContainer: document.querySelector('.cups-container'),
+  tableArea:     document.querySelector('.table-area'),
+  navLinks:      document.getElementById('navLinks'),
+  usersBlock:    document.getElementById('usersBlock'),
+  location:      document.getElementById('location'),
+  clima:         document.getElementById('clima'),
+  climaIconNav:  document.getElementById('climaIconNav'),
+  climaTempNav:  document.getElementById('climaTempNav'),
+  climaDescNav:  document.getElementById('climaDescNav'),
+};
