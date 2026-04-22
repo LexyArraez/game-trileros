@@ -36,7 +36,12 @@ nav {
     gap: 20px;
     align-items: center;
     padding: 10px 20px;
-    
+    position: sticky;
+    top: 0;
+    background: #0c172e;
+    color: white;
+    padding: 10px;
+    z-index: 999;
 }
 
 .azar-game {
@@ -285,9 +290,17 @@ h1 {
     box-shadow: none;
 }
 
-.cup[data-pos="1"] { transform: translateX(0); }
-.cup[data-pos="2"] { transform: translateX(140px); }
-.cup[data-pos="3"] { transform: translateX(280px); }
+.cup[data-pos="1"] {
+    transform: translateX(0);
+}
+
+.cup[data-pos="2"] {
+    transform: translateX(140px);
+}
+
+.cup[data-pos="3"] {
+    transform: translateX(280px);
+}
 
 .ball {
     position: absolute;
@@ -331,12 +344,12 @@ h1 {
 
 .ball {
     position: absolute;
-  width: 20px;
-  height: 20px;
-  background: var(--orange);
-  border-radius: 50%;
-  opacity: 0;
-  
+    width: 20px;
+    height: 20px;
+    background: var(--orange);
+    border-radius: 50%;
+    opacity: 0;
+
 }
 
 /*  FOOTER  */
@@ -457,32 +470,34 @@ footer {
 
 }
 
-<!--  BOTONES DE Maria  --¡>
-
-.btn{
+< !-- BOTONES DE Maria --¡>.btn {
     background-color: transparent;
     border: 2px solid;
     padding: 10px 20px;
-     font-size: 16px;
+    font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
 }
+
 .btn:hover {
     transform: scale(1.05);
 }
-.easy{
+
+.easy {
     background-color: var(--blue);
     border-color: var(--dark-blue);
     color: var(--black);
     border-radius: 20px;
 }
-.medium{
-    background-color: var(--blue); 
+
+.medium {
+    background-color: var(--blue);
     border-color: var(--dark-blue);
     color: var(--black);
     border-radius: 20px;
 }
-.hard{
+
+.hard {
     background-color: var(--blue);
     border-color: var(--dark-blue);
     color: var(--black);
