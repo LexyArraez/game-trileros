@@ -32,7 +32,7 @@ section.page-layout h2.subtitle {
 
 .location-section h2,
 .climate-section h2 {
-    font-size: 32px;
+    font-size: 30px;
     color: white
 }
 
@@ -40,7 +40,7 @@ section.page-layout h2.subtitle {
 .location-section p,
 .climate-section p {
     color: #ffffff;
-    font-size: 25px;
+    font-size: 22px;
     line-height: 1.6;
 }
 .spain {
