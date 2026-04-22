@@ -1,12 +1,7 @@
-function toggleMenu() {
-  document.getElementById('navLinks').classList.toggle('active');
-  document.getElementById('usersBlock').classList.toggle('active');
-}
-
 const DIFFICULTY = {
-  easy: { shuffles: 3, speed: 800, points: 100 },
-  medium: { shuffles: 6, speed: 500, points: 200 },
-  hard: { shuffles: 10, speed: 300, points: 400 },
+  easy:   { shuffles: 3,  speed: 800, points: 100 },
+  medium: { shuffles: 6,  speed: 500, points: 200 },
+  hard:   { shuffles: 10, speed: 300, points: 400 },
 };
 
 let state = {
@@ -20,9 +15,33 @@ let state = {
   ballIndex: 0,
   canPick: false,
   timer: null,
-  time: 0
+  time: 0,
 };
 
 let cups = [];
 let ball;
+
+const DOM = {
+  points:       document.getElementById('points'),
+  time:         document.getElementById('time'),
+  round:        document.getElementById('round'),
+  successes:    document.getElementById('successes'),
+  failures:     document.getElementById('failures'),
+  gameMessage:  document.getElementById('gameMessage'),
+  newsContainer: document.getElementById('newsContainer'),
+  cupsContainer: document.querySelector('.cups-container'),
+  tableArea:    document.querySelector('.table-area'),
+  navLinks:     document.getElementById('navLinks'),
+  usersBlock:   document.getElementById('usersBlock'),
+  location:     document.getElementById('location'),
+  clima:        document.getElementById('clima'),
+  climaIconNav: document.getElementById('climaIconNav'),
+  climaTempNav: document.getElementById('climaTempNav'),
+  climaDescNav: document.getElementById('climaDescNav'),
+};
+
+function toggleMenu() {
+  DOM.navLinks.classList.toggle('active');
+  DOM.usersBlock.classList.toggle('active');
+}
 

@@ -37,7 +37,7 @@
                     <button>ACCEDER<br>REGISTRO</button>
                 </div>
             </div>
-            <li class="menu" id="menuBtn" onclick="toggleMenu()">
+            <li class="menu" id="menuBtn">
                 <img src="./assets/icons/icons-menu.svg" alt="menú" />
             </li>
         </nav>
@@ -61,9 +61,9 @@
             <!-- COLUMNA 2: Centro - Juego -->
             <section>
                 <div class="button-difficulty">
-                    <button class="btn-easy active" onclick="setDifficulty(this,'easy')">Facil</button>
-                    <button class="btn-medium" onclick="setDifficulty(this,'medium')"> Medio</button>
-                    <button class="btn-hard" onclick="setDifficulty(this,'hard')">Dificil</button>
+                    <button class="btn-easy active" data-difficulty="easy">Facil</button>
+                    <button class="btn-medium" data-difficulty="medium">Medio</button>
+                    <button class="btn-hard" data-difficulty="hard">Dificil</button>
                 </div>
 
                 <section class="counters-game">
