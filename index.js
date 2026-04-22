@@ -25,4 +25,3 @@ let state = {
 
 let cups = [];
 let ball;
-
