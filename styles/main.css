@@ -288,6 +288,58 @@ h1 {
     text-align: center;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    top: 60%;
+    left: 15%;
+    max-width: 400px;
+    max-height: 400px;
+    width: 50%;
+    height: 50%;   
+    background: rgba(35, 24, 182, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;  
+    padding: 30px;
+    text-align: center;
+    font-size: 22px;
+    color: white;
+
+}
+
+.modal-content {
+    background: white;
+    width: 200px;
+    margin: 150px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 22px;
+}
+
+.error {
+    color: red;
+    display: none;
+}
+
+.btnGuardar {
+    padding: 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--blue);
+    
+}
+
 /*  FOOTER  */
 footer {
     color: #ffffff;
