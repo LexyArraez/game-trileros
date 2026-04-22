@@ -2,13 +2,16 @@ let mezclando = document.querySelector(".start-game").addEventListener("click", 
 let interactions = 0;
 
 function swap(idA, idB) {
-    const cupA = document.getElementById("cup-${idA}");
-    const cupB = document.getElementById("cup-${idB}");
+    const cupA = document.getElementById("cup-1");
+    const cupB = document.getElementById("cup-2");
+    const cupC = document.getElementById("cup-3");
 
     const posA = cupA.getAttribute("data-pos");
     const posB = cupB.getAttribute("data-pos");
+    const posC = cupC.getAttribute("data-pos");
     cupA.setAttribute("data-pos", posB);
     cupB.setAttribute("data-pos", posA);
+    cupC.setAttribute("data-pos", posB);
 
     const zIndexRandom = Math.floor(Math.random() * 10);
     cupA.style.zIndex = zIndexRandom;
@@ -16,15 +19,20 @@ function swap(idA, idB) {
 }
 
 function comenzarMezcla() {
-    if (mezclando) return;
+   
+   // if (mezclando) return;
     mezclando = true;
     const maxInteractions = 10;
 
     const intervalo = setInterval(() => {
         let v1 = Math.floor(Math.random() * 3);
         let v2 = Math.floor(Math.random() * 3);
+        let v3 = Math.floor(Math.random() * 3);
+
         while (v1 === v2) v2 = Math.floor(Math.random() * 3);
+        while (v1 === v3 || v2 === v3) v3 = Math.floor(Math.random() * 3);
         swap(v1, v2);
+        swap(v2, v3);
 
         interactions++;
         if (interactions >= maxInteractions) {

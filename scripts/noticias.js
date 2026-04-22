@@ -11,7 +11,9 @@ let news = [];
  * @param {string} query - Término de búsqueda
  * @param {number} pageSize - Cantidad de artículos a obtener
  */
-async function fetchNews(query = 'tecnologia', pageSize = 4) {
+
+
+async function fetchNews(query = 'deportes', pageSize = 4) {
     const container = document.getElementById('newsContainer');
 
     try {
@@ -39,7 +41,7 @@ async function fetchNews(query = 'tecnologia', pageSize = 4) {
             news = data.articles;
             renderNews();
         } else {
-            container.innerHTML = '<p class="error">No se encontraron noticias. Verifica tu API KEY en bannerNoticias.js</p>';
+            container.innerHTML = '<p class="error">No se encontraron noticias. Intenta con otro tipo de noticia.</p>';
         }
     } catch (error) {
         console.error('Error al obtener noticias:', error);
@@ -118,5 +120,5 @@ function renderNews() {
  * Inicializa la aplicación al cargar el DOM
  */
 document.addEventListener('DOMContentLoaded', () => {
-    fetchNews('tecnologia', 4);
+    fetchNews('deportes', 4);
 });
