@@ -25,3 +25,11 @@ let state = {
 
 let cups = [];
 let ball;
+
+function getCups() {
+  return [
+    document.getElementById('cup-1'),
+    document.getElementById('cup-2'),
+    document.getElementById('cup-3')
+  ];
+}

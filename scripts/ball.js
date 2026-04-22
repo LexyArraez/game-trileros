@@ -17,11 +17,7 @@ function placeBall(index) {
 
 /* INIT */
 function initGame() {
-  cups = [
-    document.getElementById('cup-1'),
-    document.getElementById('cup-2'),
-    document.getElementById('cup-3')
-  ];
+  cups = getCups();
 
   ball = document.querySelector('.ball');
 

@@ -173,11 +173,8 @@ function resetGame() {
 
     state = { ...state, phase: 'idle', round: 1, points: 0, hits: 0, miss: 0, time: 0 };
 
-    document.getElementById('points').textContent = '0';
-    document.getElementById('round').textContent = '1';
-    document.getElementById('successes').textContent = '0';
-    document.getElementById('failures').textContent = '0';
     document.getElementById('time').textContent = '0:00';
+    updateStats();
 
     ball.style.opacity = '0';
     cups.forEach(c => c.classList.remove('lift'));
@@ -189,11 +186,7 @@ function resetGame() {
 
 function resetOrder() {
     const container = document.querySelector('.cups-container');
-    cups = [
-        document.getElementById('cup-1'),
-        document.getElementById('cup-2'),
-        document.getElementById('cup-3')
-    ];
+    cups = getCups();
     cups.forEach(c => container.appendChild(c));
 }
 

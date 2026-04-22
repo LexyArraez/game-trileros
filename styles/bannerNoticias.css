@@ -114,27 +114,17 @@ section.page-layout h2.subtitle {
         padding: 5px;
     }
 
-
     .news-card-image {
         width: 50%;
         height: 150px;
     }
 
-    @media (max-width: 768px) {
-        section.page-layout {
-            grid-template-columns: 1fr;
-            padding: 5px;
-        }
+    .location-climate-section {
+        display: none;
+        order: -1;
+    }
 
-        .location-climate-section {
-            display: none;
-            /* oculto por defecto */
-            order: -1;
-
-        }
-
-        .location-climate-section.active {
-            display: flex;
-        }
+    .location-climate-section.active {
+        display: flex;
     }
 }
