@@ -36,7 +36,13 @@ nav {
     gap: 20px;
     align-items: center;
     padding: 10px 20px;
-
+    position: fixed;
+    width: 99%;
+    top: 0;
+    background: #0c172e;
+    color: white;
+    padding: 10px;
+    z-index: 9999;
 }
 
 .azar-game {
@@ -120,6 +126,9 @@ nav {
 }
 
 /*  MAIN */
+main{
+    margin-top: 90px;
+}
 h1,
 .subtitle {
     text-align: center;
@@ -459,6 +468,17 @@ footer {
 
 <!-- BOTONES DE Maria --¡>
 .btn {
+footer,
+.footer-content,
+.footer-links,
+.footer-links a {
+    z-index: 0;
+}
+  
+
+<!--  BOTONES DE Maria  --¡>
+
+.btn{
     background-color: transparent;
     border: 2px solid;
     padding: 10px 20px;

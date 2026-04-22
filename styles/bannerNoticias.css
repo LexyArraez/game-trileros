@@ -26,13 +26,13 @@ section.page-layout h2.subtitle {
     background: rgba(35, 24, 182, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
-    padding: 60px 20px;
+    padding:60px 20px;
     backdrop-filter: blur(10px);
 }
 
 .location-section h2,
 .climate-section h2 {
-    font-size: 32px;
+    font-size: 20px;
     color: white
 }
 
@@ -42,6 +42,10 @@ section.page-layout h2.subtitle {
     color: #ffffff;
     font-size: 25px;
     line-height: 1.6;
+}
+.spain {
+    width: 80px;
+    margin: 0 50px;
 }
 
 
