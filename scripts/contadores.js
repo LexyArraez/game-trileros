@@ -31,7 +31,3 @@ function setDifficulty(el, diff) {
 
   el.classList.add('active');
 }
-
-
-
-

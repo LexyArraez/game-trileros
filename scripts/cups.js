@@ -46,4 +46,4 @@ function seleccionarVaso(pos) {
     if (mezclando)
         alert("¡Espera a que termine la mezcla!");
         return;
-    }  
+    } 
