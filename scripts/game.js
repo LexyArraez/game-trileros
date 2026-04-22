@@ -45,9 +45,11 @@ function pickCup(index) {
     if (correct) {
         state.points += DIFFICULTY[state.difficulty].points;
         state.hits++;
+         playSound("hit")
         setMessage('¡Correcto!');
     } else {
         state.miss++;
+        playSound("miss")
         setMessage(`Fallaste 😢 Era el vaso ${state.ballIndex + 1}`);
     }
 
