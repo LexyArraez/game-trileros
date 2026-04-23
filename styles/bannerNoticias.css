@@ -1,4 +1,4 @@
-/* Layout de 3 columnas */
+
 section.page-layout {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
@@ -12,7 +12,7 @@ section.page-layout h2.subtitle {
     grid-column: 1 / -1;
 }
 
-/* COLUMNA IZQUIERDA: Ubicación y Clima */
+
 .location-climate-section {
     display: flex;
     flex-direction: column;
@@ -49,7 +49,6 @@ section.page-layout h2.subtitle {
 }
 
 
-/* COLUMNA CENTRAL: Juego */
 .game-section {
     padding: 30px;
     min-height: 500px;
@@ -60,7 +59,7 @@ section.page-layout h2.subtitle {
 }
 
 
-/* COLUMNA DERECHA: Noticias */
+
 .latest-news {
     display: flex;
     flex-direction: column;
@@ -107,7 +106,6 @@ section.page-layout h2.subtitle {
 }
 
 
-/* Responsive */
 @media (max-width: 768px) {
     section.page-layout {
         grid-template-columns: 1fr;

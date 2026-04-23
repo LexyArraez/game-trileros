@@ -127,6 +127,7 @@ function resetOrder() {
 
 function endGame() {
   clearInterval(state.timer);
+  localStorage.removeItem('playerName');
   setMessage(`Juego terminado 🎉 Puntos: ${state.points}`);
 }
 
