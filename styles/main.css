@@ -466,17 +466,16 @@ footer {
 
 }
 
-<!-- BOTONES DE Maria --¡>
-.btn {
+.btn,
 footer,
 .footer-content,
 .footer-links,
 .footer-links a {
     z-index: 0;
 }
+ 
   
 
-<!--  BOTONES DE Maria  --¡>
 
 .btn{
     background-color: transparent;
