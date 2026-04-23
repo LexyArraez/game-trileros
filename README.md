@@ -32,6 +32,7 @@ bolita
 
 ## Estructura del proyecto
 
+```text
 game-trileros/
 ├── index.html
 ├── assets/
@@ -59,26 +60,28 @@ game-trileros/
 └── styles/
 ├── main.css            # Estilos principales (tema cyber/neón, layout responsive)
 └── bannerNoticias.css  # Estilos del panel lateral de noticias
+```
 
 ## Tecnologias
+
 - ![HTML5](https://img.shields.io/badge/-HTML5-%23E44D27?style=flat-square&logo=html5&logoColor=ffffff)
 - ![CSS3](https://img.shields.io/badge/-CSS3-%231572B6?style=flat-square&logo=css3)
 - ![JavaScript](https://img.shields.io/badge/-JavaScript-%23F7DF1C?style=flat-square&logo=javascript&logoColor=000000&labelColor=%23F7DF1C&color=%23FFCE5A)
 - Web APIs — Geolocation, localStorage, Audio
--APIs externas
-    NewsAPI — noticias deportivas en tiempo real
-    Open-Meteo — datos meteorológicos (sin clave)
-    Nominatim — geocodificación inversa (OpenStreetMap)
+- APIs externas
+    - NewsAPI — noticias deportivas en tiempo real
+    - Open-Meteo — datos meteorológicos (sin clave)
+    - Nominatim — geocodificación inversa (OpenStreetMap)
 
 ## 🔗 Enlaces del Proyecto
 
--Notion
+- Notion
 https://www.notion.so/AZARgame-Trileros-345bac833ef680d59097d1febb3035f2?source=copy_link
 
 
 ## Autoras
-[Irina Diaz](https://github.com/irinadiaz22)
-[Dorien Llanes](https://github.com/Dorienbyte)
-[Maria de Benito](https://github.com/mariaromerodb-bit)
-[Yasira Gonzalez](https://github.com/yasirag)
-[Lexy Arreaz](https://github.com/LexyArraez)
+- [Irina Diaz](https://github.com/irinadiaz22)
+- [Dorien Llanes](https://github.com/Dorienbyte)
+- [Maria de Benito](https://github.com/mariaromerodb-bit)
+- [Yasira Gonzalez](https://github.com/yasirag)
+- [Lexy Arreaz](https://github.com/LexyArraez)
